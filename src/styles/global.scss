@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* Primary Colors */
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+
+    /* Secondary Colors */
+    --secondary-color: #e74c3c;
+    --secondary-dark: #c0392b;
+
+    /* theme Colors */
+    --theme-bg: #f6f6f6;
+    --theme-text: #161616;
+
+    --boom: white;
+}
+
+body[theme="dark"] {
+    /* Light Colors */
+    --theme-bg: #161616;
+    --theme-text: #f6f6f6;
+}
+
+/* Usage example */
+body {
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    width: 100%;
+    height: min(100vh);
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+// loading effect
+.home-loading {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .line-left,
+    .line-right {
+        position: absolute;
+        width: 0;
+        height: 1px;
+        top: 50%;
+    }
+
+    .line-left {
+        left: 0;
+        background-color: var(--primary-color);
+    }
+
+    .line-right {
+        right: 0;
+        background-color: var(--secondary-color)
+    }
+
+    .home-inner-boom {
+        width: 0;
+        height: 0;
+        background-color: var(--boom);
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        overflow: hidden;
+
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     width: 90%;
+        //     height: 90%;
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     border-radius: 50%;
+        //     background-color: var(--theme-bg);
+        // }
+
+        // .loading-dots {
+        //     background-color: #2980b9;
+        //     position: absolute;
+        // }
+    }
+
+}
