@@ -34,10 +34,6 @@ body {
     color: var(--theme-text);
     width: 100%;
     height: min(100vh);
-    overflow: hidden;
-    display: flex;
-    text-align: center;
-    justify-content: center;
 }
 
 // loading effect
@@ -75,23 +71,25 @@ body {
         transform: translate(-50%, -50%);
         border-radius: 50%;
         overflow: hidden;
-
-        // &::after {
-        //     content: '';
-        //     position: absolute;
-        //     width: 90%;
-        //     height: 90%;
-        //     top: 50%;
-        //     left: 50%;
-        //     transform: translate(-50%, -50%);
-        //     border-radius: 50%;
-        //     background-color: var(--theme-bg);
-        // }
-
-        // .loading-dots {
-        //     background-color: #2980b9;
-        //     position: absolute;
-        // }
     }
 
+}
+
+// home design
+.home {
+    position: relative;
+    height: 200vh;
+
+    .home-header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        padding: 16px;
+        backdrop-filter: blur(5px);
+        background-color: transparent;
+    }
+
+    .container {
+        opacity: 0;
+    }
 }
